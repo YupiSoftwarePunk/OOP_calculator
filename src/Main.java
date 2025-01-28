@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(){
+        Menu.showMenu();
 
         Scanner input = new Scanner(System.in);
-
         System.out.println("Добро пожаловать в калькулятор!!");
         System.out.println("Выберите действие: ");
         System.out.println("1. Сложение (add)\n2. Вычитание (subtract)\n3. Умножение (multiply)\n4. деление (divide)\n5. Возведение в степень (pow)\n6. Вычисление факториала (factorial)\n");
@@ -19,7 +19,7 @@ public class Main {
         System.out.print("\n\nВведите 2 число: ");
         double num2 = input.nextDouble();
 
-        double funcRes = 0;
+        double funcRes = 0; // for function's results
 
         try {
             FileWriter writer = new FileWriter("input.txt", true);
