@@ -4,7 +4,7 @@ public class ScientificCalculator {
     }
 
     public static double Factorial(double num1){
-        if (num1 == 0 || num1 == 0){
+        if (num1 == 0 || num1 == 1){
             return 1;
         }
         else {
