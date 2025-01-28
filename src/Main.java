@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Menu.showMenu();
+        Menu.showMenu();  // shows menu panel
 
         Scanner input = new Scanner(System.in);
-
         int choose = input.nextInt();
 
         System.out.print("\n\nВведите 1 число: ");
@@ -16,8 +15,8 @@ public class Main {
         System.out.print("Введите 2 число: ");
         double num2 = input.nextDouble();
 
-        double funcRes = 0; // for function's results
 
+        // Запись num1 и num2 в текстовый файлик
         try {
             FileWriter writer = new FileWriter("input.txt", true);
 
@@ -30,6 +29,8 @@ public class Main {
         catch (IOException e){
             System.out.println("Возникла ошибка во время записи, проверьте данные.");
         }
+
+        double funcRes = 0; // for function's results
 
         if (choose == 1){
             funcRes =  Calculator.Add(num1, num2);
@@ -67,6 +68,8 @@ public class Main {
             System.out.println(funcRes);
         }
 
+
+        // запись результата функции в текстовый файлик
         try {
             FileWriter writer = new FileWriter("output.txt", true);
 
