@@ -18,11 +18,11 @@ public class Main {
 
         // Запись num1 и num2 в текстовый файлик
         try {
-            FileWriter writer = new FileWriter("input.txt", true);
+            FileWriter writer = new FileWriter("input.txt", false);
 
-            writer.write((int) num1);
+            writer.write("Первое число: "+ num1 + "\n");
 
-            writer.write((int) num2);
+            writer.write("Второе число: "+ num2 + "\n");
 
             writer.close();
         } catch (IOException e) {
