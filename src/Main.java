@@ -9,6 +9,11 @@ public class Main {
         Menu.showMenu();  // shows menu panel
         int choose = input.nextInt();
 
+        // выдача ошибки если ввод действия > 6
+        if (choose > 6){
+            throw new IllegalArgumentException("\nНеверный ввод действия!!");
+        }
+
         System.out.print("\n\nВведите 1 число: ");
         double num1 = input.nextDouble();
 
@@ -28,9 +33,13 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Возникла ошибка во время записи, проверьте данные.");
         }
+        finally {
+            input.close();
+        }
 
         double funcRes = 0; // for function's results
 
+        // Вызовы функций
         if (choose == 1) {
             funcRes = Calculator.Add(num1, num2);
             System.out.println(funcRes);
@@ -63,9 +72,9 @@ public class Main {
 
             // запись результата функции в текстовый файлик
             try {
-                FileWriter writer = new FileWriter("output.txt", true);
+                FileWriter writer = new FileWriter("output.txt", false);
 
-                writer.write((int) funcRes);
+                writer.write("Результат функции = " + funcRes);
 
                 writer.close();
             } catch (IOException e) {
