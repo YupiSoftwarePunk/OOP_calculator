@@ -11,6 +11,7 @@ public class Main {
 
         // выдача ошибки если ввод действия > 6
         if (choose > 6){
+            System.out.println("\nНеверный ввод действия!!");
             throw new IllegalArgumentException("\nНеверный ввод действия!!");
         }
 
@@ -74,7 +75,7 @@ public class Main {
             try {
                 FileWriter writer = new FileWriter("output.txt", false);
 
-                writer.write("Результат функции = " + funcRes);
+                writer.write("Результат функции = " + Double.toString(funcRes));
 
                 writer.close();
             } catch (IOException e) {
