@@ -43,32 +43,32 @@ public class Main {
         // Вызовы функций
         if (choose == 1) {
             funcRes = Calculator.Add(num1, num2);
-            System.out.println(funcRes);
+            System.out.println("Сумма = " + funcRes);
         }
         else if (choose == 2) {
             funcRes = Calculator.Substract(num1, num2);
-            System.out.println(funcRes);
+            System.out.println("Разность = " + funcRes);
         }
         else if (choose == 3) {
             funcRes = Calculator.Multiply(num1, num2);
-            System.out.println(funcRes);
+            System.out.println("Произведение = " + funcRes);
         }
         else if (choose == 4) {
             try {
                 double result = Calculator.Divide(num1, num2);
                 funcRes = result;
-                System.out.println(funcRes);
+                System.out.println("Частное = " + funcRes);
             } catch (ArithmeticException e) {
                 System.out.println("Ошибка: Деление на ноль невозможно.");
             }
         }
         else if (choose == 5) {
             funcRes = ScientificCalculator.Pow(num1, num2);
-            System.out.println(funcRes);
+            System.out.println("Число возведенное в степень = " + funcRes);
         }
         else if (choose == 6) {
             funcRes = ScientificCalculator.Factorial(num1);
-            System.out.println(funcRes);
+            System.out.println("Факториал числа = " + funcRes);
 
 
             // запись результата функции в текстовый файлик
