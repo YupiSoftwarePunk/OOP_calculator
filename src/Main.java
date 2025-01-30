@@ -12,7 +12,7 @@ public class Main {
         // выдача ошибки если ввод действия > 6
         if (choose > 6){
             System.out.println("\nНеверный ввод действия!!");
-            throw new IllegalArgumentException("\nНеверный ввод действия!!");
+            return;
         }
 
         System.out.print("\n\nВведите 1 число: ");
